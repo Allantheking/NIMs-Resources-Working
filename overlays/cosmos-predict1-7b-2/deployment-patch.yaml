@@ -26,7 +26,7 @@ spec:
         - containerPort: 8000
         env:
         - name: NGC_API_KEY
-          value: "eyJhdXRocyI6eyJudmNyLmlvIjp7InVzZXJuYW1lIjoiJG9hdXRodG9rZW4iLCJwYXNzd29yZCI6ImJuWm1jSE15YVd3MFpEUTFPR3B0YUhGMk9HcHdhR0V5TWpjNk1qWXhNRFZoWlRZdE1HRTRZUzAwWWpCakxXRTFZVFF0WW1Zek5qRmhabVEwTXpBeiJ9fX0="
+          value: "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"
         volumeMounts:
         - name: nim-cache
           mountPath: /opt/nim/.cache
