@@ -11,6 +11,11 @@ spec:
       labels:
         name: DEPLOYMENT_INFORMATION
     spec:
+      dnsPolicy: "None"                    # Required when overriding dnsConfig
+      dnsConfig:
+        nameservers:
+        - 8.8.8.8
+        - 1.1.1.1
       nodeSelector:
         kubernetes.io/hostname: NODE_SELECTOR
       containers:
@@ -23,8 +28,8 @@ spec:
         - name: NGC_API_KEY
           valueFrom:
             secretKeyRef:
-              name: ngc-api-secret        # This is your pull secret AND API key holder
-              key: NGC_API_KEY             # Make sure this key exists in the secret!
+              name: ngc-api-secret
+              key: NGC_API_KEY
         volumeMounts:
         - name: nim-cache
           mountPath: /opt/nim/.cache
@@ -43,5 +48,5 @@ spec:
       - name: nim-cache
         emptyDir: {}
       imagePullSecrets:
-      - name: sercret-nvidia              # This allows pulling from nvcr.io
+      - name: sercret-nvidia
       restartPolicy: Always
