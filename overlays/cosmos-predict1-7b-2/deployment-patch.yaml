@@ -23,7 +23,7 @@ spec:
         - name: NGC_API_KEY
           valueFrom:
             secretKeyRef:
-              name: ngc-api-secret       # Name of the Kubernetes secret
+              name: sercret-nvidia       # Name of the Kubernetes secret
               key: NGC_API_KEY           # Key inside the secret containing your API key
         volumeMounts:
         - name: nim-cache
