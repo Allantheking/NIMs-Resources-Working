@@ -1,4 +1,3 @@
-
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
@@ -11,7 +10,7 @@ spec:
   arguments:
     parameters:
       - name: repoUrl
-        value: "https://github.com/Kyuubi2709/NIMs-Resources-Working.git"  # Repo URL
+        value: "https://github.com/Allantheking/NIMs-Resources-Working.git"  # Repo URL
       - name: repoBranch
         value: "main"  # Branch to deploy
       - name: cpuLimit
