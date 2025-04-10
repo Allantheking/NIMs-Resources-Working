@@ -23,7 +23,7 @@ spec:
         - name: NGC_API_KEY
           valueFrom:
             secretKeyRef:
-              name: sercret-nvidia         # This is your pull secret AND API key holder
+              name: ngc-api-secret        # This is your pull secret AND API key holder
               key: NGC_API_KEY             # Make sure this key exists in the secret!
         volumeMounts:
         - name: nim-cache
